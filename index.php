@@ -128,7 +128,38 @@ echo"</div>";
 }
 function Galery_()
 {
-    
+    $divResponsive="<div id=\"responsive\">";
+    $divResponsive2="</div>";
+
+    $imagenescontainers=array();
+    array_push($imagenescontainers,"<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>",
+                                   "<div class=\"container\"><img src=\"Error/1.jpg\"></div>");
+
+                                   echo($divResponsive);
+                                   foreach($imagenescontainers as &$valor)
+                                   {
+                                     echo($valor);
+                                   }
+                                   echo($divResponsive2);
+
 }
 function Contact_()
 {
@@ -208,6 +239,7 @@ switch ($_Goto)
     case "Galery" :
     case "galery" :
     {
+       
         Galery_();
      break;
     }
@@ -254,6 +286,12 @@ switch ($_Goto)
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="estilos.css">
+        <?php
+        if($Goto=="Galery"||$Goto=="galery")
+        {
+          echo("<link rel=\"stylesheet\" type=\"text/css\" href=\"GaleryResponsive.css\">");
+        }
+        ?>
     </head>
     <body>
         <div id="warper">

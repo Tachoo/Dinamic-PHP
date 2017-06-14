@@ -1,1 +1,2 @@
 ErrorDocument 404 /Examen/404Error.php
+ErrorDocument 404 /Dinamic-PHP/404Error.php
