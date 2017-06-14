@@ -1,18 +1,87 @@
 <?php
 /*Funcions to sections in especific*/
 //Head
+$Goto=1;
+if(isset($_GET['page']))
+{
+$Goto=$_GET['page'];
+}else
+{
+$Goto="Home";    
+}
+switch ($Goto)
+{
+    //Individual case of EverySingle page home
+    case "Home" :
+    case "home" :
+    {
+      
+     break;
+    }
+    //Individual case of EverySingle page about us
+    case "Aboutus" :
+    case "aboutus" :
+    {
+       
+     break;
+    }
+    //Individual case of EverySingle page galery
+    case "Galery" :
+    case "galery" :
+    {
+        
+     break;
+    }
+    //Individual case of EverySingle page contac
+    case "Contact" :
+    case "contact" :
+    {
+       
+     break;
+    }
+    //Individual case of EverySingle page singin
+    case "Singin" :
+    case "singin" :
+    {
+        
+     break;
+    }
+    //Individual case of EverySingle page singup
+    case "Singup" :
+    case "singup" :
+    {
+        
+     break;
+    }
+    case "Error" :
+    case "error" :
+    {
+      
+     break;
+    }
+    //Default case where not is home
+    default:
+    {
+        header("Location: 404Error.php");
+          
+     break;
+    }
+}
+
+
+
 function Home_()
 {
 $DivClassSlider="<div class=\"slider\">";
 $Slider1="<ul>";
-$img[4]= array("<li><img src=\"slider/1.jpg\" alt=\"slider1\"></li>",
+$img= array();
+array_push($img,"<li><img src=\"slider/1.jpg\" alt=\"slider1\"></li>",
 "<li><img src=\"slider/2.jpg\" alt=\"slider1\"></li>",
 "<li><img src=\"slider/3.jpg\" alt=\"slider1\"></li>",
-"<li><img src=\"slider/4.jpg\" alt=\"slider1\"></li>"
-);
+"<li><img src=\"slider/4.jpg\" alt=\"slider1\"></li>");
 $Slider2="</ul>";
 
-echo "".$DivClassSlider.$Slider1.$img[1].$img[2].$img[3].$img[4].$Slider2;
+echo $DivClassSlider.$Slider1.$img[0].$img[1].$img[2].$img[3].$Slider2."</div>";
 }
 function Aboutus_()
 {
@@ -36,218 +105,77 @@ function Singup_()
 }
 
 
-function DHTML_header($_string,$_bool)
-{
-switch ($_string)
-   {
-// home
-       case"Home":
-       case"home":
-       {
-         break;
-       }
-// Aboutus
-       case"Aboutus":
-       case"aboutus":
-       {
-         break;
-       }
-// galery
-       case"Galery":
-       case"galery":
-       {
-         break;
-       }
-// contac
-       case"Contact":
-       case"contact":
-       {
-         break;
-       }
-// singin
-       case"Singin":
-       case"singin":
-       {
-         break;
-       }
-// singup
-       case"Singup":
-       case"singup":
-       {
-         break;
-       }
-       
-       /*Default case*/
-       default:
-       {
 
-         break;
-       }
-   }   
-}
 //MainC
-function DHTML_MainC($_string,$_bool)
-{
-switch ($_string)
-   {
-// home
-       case"Home":
-       case"home":
-       {
-         break;
-       }
-// Aboutus
-       case"Aboutus":
-       case"aboutus":
-       {
-         break;
-       }
-// galery
-       case"Galery":
-       case"galery":
-       {
-         break;
-       }
-// contac
-       case"Contact":
-       case"contact":
-       {
-         break;
-       }
-// singin
-       case"Singin":
-       case"singin":
-       {
-         break;
-       }
-// singup
-       case"Singup":
-       case"singup":
-       {
-         break;
-       }
-       
-       /*Default case*/
-       default:
-       {
 
-         break;
-       }
-   }
-}
 //Head
-function DHTML_Footer($_string,$_bool)
-{
-switch ($_string)
-   {
-// home
-       case"Home":
-       case"home":
-       {
-         break;
-       }
-// Aboutus
-       case"Aboutus":
-       case"aboutus":
-       {
-         break;
-       }
-// galery
-       case"Galery":
-       case"galery":
-       {
-         break;
-       }
-// contact
-       case"Contact":
-       case"contact":
-       {
-         break;
-       }
-// singin
-       case"Singin":
-       case"singin":
-       {
-         break;
-       }
-// singup
-       case"Singup":
-       case"singup":
-       {
-         break;
-       }
-       
-       /*Default case*/
-       default:
-       {
 
-         break;
-       }
-   }
-}
 
-$Goto=1;
-if(isset($_GET['page']))
-{
-$Goto=$_GET['page'];
-}else
-{
-$Goto="Home";    
-}
 
-switch ($Goto)
+/**/
+function DHTML_MainC($_Goto)
+{
+switch ($_Goto)
 {
     //Individual case of EverySingle page home
     case "Home" :
     case "home" :
     {
-        
+      Home_();
      break;
     }
     //Individual case of EverySingle page about us
     case "Aboutus" :
     case "aboutus" :
     {
-        
+        Aboutus_();
      break;
     }
     //Individual case of EverySingle page galery
     case "Galery" :
     case "galery" :
     {
-        
+        Galery_();
      break;
     }
     //Individual case of EverySingle page contac
     case "Contact" :
     case "contact" :
     {
-        
+        Contact_();
      break;
     }
     //Individual case of EverySingle page singin
     case "Singin" :
     case "singin" :
     {
-        
+        Singin_();
      break;
     }
     //Individual case of EverySingle page singup
     case "Singup" :
     case "singup" :
     {
-        
+        Singup_();
      break;
     }
-    //Default case is home
+    case "Error" :
+    case "error" :
+    {
+       echo($_Goto);
+     break;
+    }
+    //Default case where not is home
     default:
     {
-        
-        //header("Local:index.php?goto=home");
+      
+        header("Location: Error404.php");
+        exit();
      break;
     }
 }
 
+}
 ?>
 <!DOCTYPE>
 <html>
@@ -275,22 +203,10 @@ switch ($Goto)
 <!--header-->
 <!--mainc-->
               <div id="mainc">
-              <div class="clearfix" id="mfix">
-                    
+              <div class="clearfix" id="mfix">                    
                  <?php
-                     $DivClassSlider="<div class=\"slider\">";
-$Slider1="<ul>";
-$img[4]= array("<li><img src=\"slider/1.jpg\" alt=\"slider1\"></li>",
-"<li><img src=\"slider/2.jpg\" alt=\"slider1\"></li>",
-"<li><img src=\"slider/3.jpg\" alt=\"slider1\"></li>",
-"<li><img src=\"slider/4.jpg\" alt=\"slider1\"></li>"
-);
-$Slider2="</ul>";
-
-echo "".$DivClassSlider.$Slider1.$img[0].$img[1].$img[2].$img[3].$Slider2."</div>";
+                  DHTML_MainC($Goto);
                  ?>
-
-
                   </div>
                
               </div>
