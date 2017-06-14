@@ -1,0 +1,15 @@
+Building a Dinamic Website
+
+Functions per separate  like  docst
+
+
+
+
+<div class="slider">
+                   <ul>
+                       <li><img src="slider/1.jpg" alt="slider1" ></li>
+                       <li><img src="slider/2.jpg" alt="slider2" ></li>
+                       <li><img src="slider/3.jpg" alt="slider3" ></li>
+                       <li><img src="slider/4.jpg" alt="slider4" ></li>                                              
+                   </ul>
+               </div>

@@ -1,0 +1,221 @@
+*
+{
+    margin:0px;
+    padding: 0px;
+}
+body
+{
+    background: url(http://viagourmet.com/sites/default/files/restaurant-le-meurice-alain-ducasse-salle-9976-ok-pierre-monetta-2.jpg);
+    background-position: -320 -40;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 14px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    vertical-align: center;
+    text-decoration: none;
+    text-decoration-style: none;
+    color: black;
+    list-style-type: none;
+}
+ul
+{
+    list-style: none;
+}
+a
+{
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
+}
+#warper
+{
+   background-color: rgba(133, 133, 133, 0.3);
+   width: 100%;
+   display: flex;
+   
+}
+
+
+#pc
+{
+width: 100%;
+}
+.clearfix
+{
+    
+    width: 70%;    
+    margin: 0 auto;
+    display: block;
+
+}
+#hfix
+{
+ background-color: rgba(133, 133, 133, 0.6);
+ height: 60px;
+ top: 0px;
+ 
+}
+#navbar
+{
+    position: fixed;
+    width: 70%;
+}
+#navbar>li
+{
+background-color: rgba(133, 133, 133, 0.9);    
+float: left;
+width: 20%;
+height: 50px;
+}
+
+a:hover
+{
+    color: white;
+}
+/**/
+#mfix
+{
+ background-color: rgba(133, 133, 133, 0.6);
+ height: 720px;
+ display: inline-block;
+ 
+}
+/**/
+/*Slider*/
+.slider
+{
+width: 100%;
+margin: auto;
+overflow: hidden;
+}
+.slider ul
+{
+    display: flex;
+    width: 400%;
+    animation: Mover 20s infinite;
+    animation-timing-function: ease-in-out;
+
+}
+.slider li
+{
+    width: 95%;
+    list-style: none;
+    margin: auto;
+}
+.slider img
+{
+    width: 100%;
+}
+
+@keyframes Mover
+{
+/* 4s */
+    0%{margin-left: 0;}
+    20%{margin-left: 0;}
+/* 4s */
+    25%{margin-left: -100%}
+    45%{margin-left: -100%}
+/* 4s */
+    50%{margin-left: -200%}
+    70%{margin-left: -200%}
+/* 4s */
+    75%{margin-left: -300%}
+    100%{margin-left: -300%}
+}
+/*Slider*/
+/**/
+#ffix
+{
+ background-color: rgba(133, 133, 133, 0.6);
+ height: 100px;
+ bottom: 0px;
+ display:flex;
+
+}
+.categories
+{
+width: 33.3333333333333333%;
+
+height: 100%;
+
+}
+
+#top
+{
+    width: 100%;
+    height: 30%;
+    
+    display: flex; 
+}
+#low
+{
+    width: 100%;
+    height: 70%;
+    display: flex;
+}
+.sitemap
+{
+width: 33.3333333333333333%;
+height: 100%;
+
+display: block;
+}
+
+.labels
+{
+   margin: 0 auto;
+   
+}
+/**/
+#fix
+{
+    width: 70%;
+    height: 100%;
+
+    margin: 0 auto;
+}
+#socialmedia>ul
+{
+    display:inline-flex;
+    
+}
+
+.SocialSize
+{
+    width: 40px;
+   height: 40px;
+   margin-left: 0 auto;
+}
+#slogan
+{
+    font-style: italic;
+}
+#socialFx
+{
+    width: 50%;
+    margin: 0 auto;
+}
+#info
+{
+    
+    font-size: 13px;
+}
+#info>p
+{
+    margin-left: 2px;     
+}
+.Subbners
+{
+    margin-left:5px; 
+    float: left;
+    
+}
+dd
+{
+
+    display: flex;
+}
+
+/*Trattoria dal padrino*/
